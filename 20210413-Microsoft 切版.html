@@ -1130,8 +1130,9 @@
             .footer-down {
                 padding: 30px 24px 16px 24px;
             }
-        }
 
+
+        }
 
         @media(max-width:860px) {
 
@@ -1151,7 +1152,7 @@
                 display: flex;
             }
 
-            nav .container .links .link div {
+            nav .container .links .link .all {
                 background-image: url(./img/下拉式箭頭.jpg);
                 width: 20px;
                 height: 20px;
@@ -1169,6 +1170,11 @@
             footer .container .footer-up .option ul {
                 width: 260px;
             }
+        }
+
+
+        .burger {
+            display: none;
         }
 
 
@@ -1216,10 +1222,10 @@
                 display: none;
             }
 
-            nav .options {
+            /* nav .options {
                 position: absolute;
                 left: 615px;
-            }
+            } */
 
 
             /* nav .options .option-1 div {
@@ -1274,92 +1280,94 @@
                 <a href="" class="link">Xbox</a>
                 <a href="" class="link">支援</a>
                 <a href="" class="link">
-                    <p>更多</p>
+                    <div id="more">更多</div>
                     <div class="all"></div>
                 </a>
                 <label for="menu-burger" class="burger">☰</label>
                 <input type="checkbox" id="menu-burger">
                 <div class="hidden-menu">
                 </div>
-                <div class="options">
-                    <label for="menu" class="option">所有 Microsoft
-                        <div class="all"></div>
-                    </label>
-                    <input type="checkbox" id="menu">
-                    <div class="hidden-menu">
-                        <div class="menu-top">
-                            <div class="link">
-                                <span>軟體</span>
-                                <a href="">Windows 應用程式</a>
-                                <a href="">OneDrive</a>
-                                <a href="">Outlook</a>
-                                <a href="">Skype</a>
-                                <a href="">OneNote</a>
-                                <a href="">Microsoft Teams</a>
-                            </div>
-                            <div class="link">
-                                <span>個人電腦和設備</span>
-                                <a href="">選購 Xbox</a>
-                                <a href="">電腦配件</a>
-                            </div>
-                            <div class="link">
-                                <span>娛樂</span>
-                                <a href="">Xbox Game Pass Ultimate</a>
-                                <a href="">Xbox Live Gold</a>
-                                <a href="">Xbox 與遊戲</a>
-                                <a href="">電腦遊戲</a>
-                                <a href="">Windows 遊戲</a>
-                            </div>
-                            <div class="link">
-                                <span>商務適用</span>
-                                <a href="">Microsoft Azure</a>
-                                <a href="">Microsoft Dynamics 365</a>
-                                <a href="">Microsoft 365</a>
-                                <a href="">Microsoft Industry</a>
-                                <a href="">資料平台</a>
-                                <a href="">Power Platform</a>
-                                <a href="">選購商務版</a>
-                            </div>
-                            <div class="link">
-                                <span>Developer & IT</span>
-                                <a href="">.NET</a>
-                                <a href="">Visual Studio</a>
-                                <a href="">Windows Server</a>
-                                <a href="">開發 Windows 應用程式</a>
-                                <a href="">文件</a>
-                                <a href="">Power Apps</a>
-                            </div>
-                            <div class="link">
-                                <span>其他</span>
-                                <a href=""> Microsoft Rewards</a>
-                                <a href="">免費下載與安全性</a>
-                                <a href="">教育</a>
-                                <a href="">禮品卡</a>
-                                <a href="">Licensing</a>
-                            </div>
-                        </div>
-                        <div class="menu-down">
-                            <div class="link">
-                                <a href="">檢視網站地圖</a>
-                                <div class="arrow">﹥</div>
-                            </div>
 
+            </div>
+            <div class="options">
+                <label for="menu" class="option">所有 Microsoft
+                    <div class="all"></div>
+                </label>
+                <input type="checkbox" id="menu">
+                <div class="hidden-menu">
+                    <div class="menu-top">
+                        <div class="link">
+                            <span>軟體</span>
+                            <a href="">Windows 應用程式</a>
+                            <a href="">OneDrive</a>
+                            <a href="">Outlook</a>
+                            <a href="">Skype</a>
+                            <a href="">OneNote</a>
+                            <a href="">Microsoft Teams</a>
+                        </div>
+                        <div class="link">
+                            <span>個人電腦和設備</span>
+                            <a href="">選購 Xbox</a>
+                            <a href="">電腦配件</a>
+                        </div>
+                        <div class="link">
+                            <span>娛樂</span>
+                            <a href="">Xbox Game Pass Ultimate</a>
+                            <a href="">Xbox Live Gold</a>
+                            <a href="">Xbox 與遊戲</a>
+                            <a href="">電腦遊戲</a>
+                            <a href="">Windows 遊戲</a>
+                        </div>
+                        <div class="link">
+                            <span>商務適用</span>
+                            <a href="">Microsoft Azure</a>
+                            <a href="">Microsoft Dynamics 365</a>
+                            <a href="">Microsoft 365</a>
+                            <a href="">Microsoft Industry</a>
+                            <a href="">資料平台</a>
+                            <a href="">Power Platform</a>
+                            <a href="">選購商務版</a>
+                        </div>
+                        <div class="link">
+                            <span>Developer & IT</span>
+                            <a href="">.NET</a>
+                            <a href="">Visual Studio</a>
+                            <a href="">Windows Server</a>
+                            <a href="">開發 Windows 應用程式</a>
+                            <a href="">文件</a>
+                            <a href="">Power Apps</a>
+                        </div>
+                        <div class="link">
+                            <span>其他</span>
+                            <a href=""> Microsoft Rewards</a>
+                            <a href="">免費下載與安全性</a>
+                            <a href="">教育</a>
+                            <a href="">禮品卡</a>
+                            <a href="">Licensing</a>
                         </div>
                     </div>
-                    <a href="" class="option-1">
-                        <p>搜尋</p>
-                        <div class="search"></div>
-                    </a>
-                    <a href="" class="option-2">
-                        <p>購物車</p>
-                        <div class="shop"></div>
-                    </a>
-                    <a href="" class="option-3">
-                        <p>登入</p>
-                        <div class="user"></div>
-                    </a>
+                    <div class="menu-down">
+                        <div class="link">
+                            <a href="">檢視網站地圖</a>
+                            <div class="arrow">﹥</div>
+                        </div>
+
+                    </div>
                 </div>
+                <a href="" class="option-1">
+                    <p>搜尋</p>
+                    <div class="search"></div>
+                </a>
+                <a href="" class="option-2">
+                    <p>購物車</p>
+                    <div class="shop"></div>
+                </a>
+                <a href="" class="option-3">
+                    <p>登入</p>
+                    <div class="user"></div>
+                </a>
             </div>
+            <div class="links-2"></div>
     </nav>
 
     <main>
