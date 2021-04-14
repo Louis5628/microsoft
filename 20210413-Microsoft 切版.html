@@ -36,6 +36,10 @@
 
         }
 
+        nav .links .links-2 {
+            display: none;
+
+        }
 
         nav .links {
             display: flex;
@@ -43,7 +47,6 @@
             height: 100%;
             font-size: 13px;
         }
-
 
         nav .links .link {
             margin: 0 14px;
@@ -55,8 +58,6 @@
             text-decoration: underline;
         }
 
-
-
         nav .links .logo {
             background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31);
             background-size: contain;
@@ -67,13 +68,15 @@
             margin: 0 15px 0 10px;
         }
 
+        nav .container .links .link:nth-child(8) {
+            display: none;
+        }
 
         nav .options {
             display: flex;
             height: 100%;
             font-size: 13px;
         }
-
 
         nav .options .option,
         .option-1,
@@ -138,14 +141,11 @@
             position: absolute;
             top: 51px;
             right: 140px;
-
         }
 
         #menu:checked+.hidden-menu {
             display: flex;
             flex-direction: column;
-
-
         }
 
         nav .container .options .hidden-menu {
@@ -200,7 +200,6 @@
 
         nav .container .options .hidden-menu .menu-down .link {
             display: flex;
-
         }
 
         nav .container .options .hidden-menu .menu-down .link a {
@@ -1136,10 +1135,6 @@
 
         @media(max-width:860px) {
 
-            nav .container .links .link:nth-child(5) {
-                display: none;
-            }
-
             nav .container .links .link:nth-child(6) {
                 display: none;
             }
@@ -1148,9 +1143,19 @@
                 display: none;
             }
 
+            nav .container .links .link:nth-child(8) {
+                display: flex;
+                align-items: center;
+            }
+
             nav .container .links .link {
                 display: flex;
             }
+
+            nav .container .links .link {
+                margin: 12px;
+            }
+
 
             nav .container .links .link .all {
                 background-image: url(./img/下拉式箭頭.jpg);
@@ -1159,7 +1164,7 @@
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
-                margin-top: 15px;
+                margin-top: 5px;
             }
 
             .container #section-4 {
@@ -1182,6 +1187,7 @@
 
             nav {
                 position: relative;
+                padding: 0 8px;
             }
 
             nav .links .logo {
@@ -1217,9 +1223,19 @@
                 display: none;
             }
 
-            nav .options .option,
-            nav .options .option-1 {
+            nav .options .option{
                 display: none;
+            }
+
+            nav .options{
+                width: calc(100% - 55px);
+                justify-content: flex-end;
+            }
+
+            nav .container .options .option-1 {
+                margin-right: 0;
+                margin-right: auto;
+                margin-left: 0;
             }
 
             /* nav .options {
@@ -1235,12 +1251,17 @@
             } */
 
             .burger {
+                display: block;
                 font-size: 20px;
+                width: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
-            nav .container .options .hidden-menu {
-                width: 500px;
-                height: 356px;
+            nav .container .links .menu-burger {
+                width: 200px;
+                height: 200px;
                 background-color: rgb(242, 242, 242);
                 z-index: 1;
                 position: absolute;
@@ -1249,19 +1270,18 @@
 
             }
 
-            #menu-burger:checked+.hidden-menu {
+            #menu:checked+.menu-burger {
                 display: flex;
                 flex-direction: column;
-
-
             }
 
-            nav .container .options .hidden-menu {
+            nav .container .options .menu-burger{
                 display: none;
             }
 
-
-
+            footer .container .footer-up .option {
+              width: 30%;
+            }
 
 
         }
@@ -1271,6 +1291,7 @@
 <body>
     <nav>
         <div class="container">
+
             <div class="links">
                 <a href="" class="link logo"></a>
                 <a href="" class="link">Microsoft 365</a>
@@ -1284,8 +1305,8 @@
                     <div class="all"></div>
                 </a>
                 <label for="menu-burger" class="burger">☰</label>
-                <input type="checkbox" id="menu-burger">
-                <div class="hidden-menu">
+                <input type="checkbox" id="menu">
+                <div class="menu-burger">
                 </div>
 
             </div>
@@ -1367,7 +1388,6 @@
                     <div class="user"></div>
                 </a>
             </div>
-            <div class="links-2"></div>
     </nav>
 
     <main>
