@@ -12,14 +12,21 @@
             height: 100px;
             background-color: coral;
         }
+
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
     </style>
 </head>
 
 <body>
 
     <div class="box1">2121212121</div>
-
-
+ 
     <script>
 
         document.querySelector('.box1').innerHTML = 'yoyoyoyoyoyoyoy'
@@ -29,7 +36,7 @@
         console.log(document.querySelector('.box1'));
         var x = 200;
 
-        var a = ['111', '222', '333']
+        var a = ['111', '222', '333', '444']
         console.log(a[0]);
         console.log(a[1]);
         console.log(a[2]);
@@ -39,16 +46,25 @@
 
         console.log(boolean);
         console.log(boolean + x);
-        console.log(y + x)
-        console.log(a[0] + x)
+        console.log(y + x);
+        console.log(a[0] + x);
 
         var b = [20, 30, 40];
         console.log(b[1] + x);
-        
 
+        var z = 'zoo';
+        console.log(z + y);
+        console.log(z + a[3]);
+        console.log(a[2] * boolean);
+        console.log(a + b);
+        console.log(a * b);
 
+        var q = [5, 10, 5, 5, 10, 5];
+        var w = [6, 10, 6, 5, 10, 5];
 
+        console.log(q[4] * w[5]);
 
+        console.log(z * boolean);
 
     </script>
 </body>
