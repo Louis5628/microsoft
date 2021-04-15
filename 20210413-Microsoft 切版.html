@@ -1257,6 +1257,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-decoration:none;
             }
 
             nav .container .links .menu-burger {
@@ -1266,18 +1267,19 @@
                 z-index: 1;
                 position: absolute;
                 top: 51px;
-                right: 140px;
+                left: 0;
+                display: none;
 
             }
 
-            #menu:checked+.menu-burger {
+            #menu-1:checked+.menu-burger {
                 display: flex;
                 flex-direction: column;
             }
 
-            nav .container .options .menu-burger{
+            /* nav .container .options .menu-burger{
                 display: none;
-            }
+            } */
 
             footer .container .footer-up .option {
               width: 30%;
@@ -1304,8 +1306,10 @@
                     <div id="more">更多</div>
                     <div class="all"></div>
                 </a>
-                <label for="menu-burger" class="burger">☰</label>
-                <input type="checkbox" id="menu">
+                <label for="menu-1" class="link">☰
+                    <div class="burger"></div>
+                </label>
+                <input type="checkbox" id="menu-1">
                 <div class="menu-burger">
                 </div>
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            font-size: 48px;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">點點變顏色!!!</div>
+
+
+
+
+    <script>
+        // box 變數宣告加指定元素
+        var box = document.querySelector('.box1')
+
+        // box 點擊指令程式碼
+        box.onclick = function () {
+            // box "包含"指令程式碼
+            if (box.classList.contains('blue')) {
+            // box "移除"指令程式碼
+                box.classList.remove('blue')
+            // box "增加"指令程式碼
+            } else {
+                box.classList.add('blue')
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

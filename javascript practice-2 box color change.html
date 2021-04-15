@@ -40,17 +40,19 @@
     <div class="box2">green box</div>
 
     <script>
-
+          // box 變數設定
         var box1 = document.querySelector('.box1');
         var box2 = document.querySelector('.box2');
-
+        // box 點擊指令程式碼
         box1.onclick = function () {
             console.log('點擊變藍色');
+            // "classList" 增加.class指令不用在html內新增.class程式碼
             box1.classList.add('blue')
         };
 
         box2.onclick = function () {
             console.log('11111');
+            // box "移除"指令程式碼
             box1.classList.remove('blue')
         };
 

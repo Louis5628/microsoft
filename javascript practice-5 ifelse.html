@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var score = 45
+
+        // 法一 
+        // 利用多個 if 達成分數篩選功能，多個 if 為同層，需要在(condition)內放置許多條件如區間，因為 if 特性為不管有沒有符合條件都會一直往下跑，因此(condition)內需要考慮較多因素。
+        // (condition)內許多條件可以使用 && 達成許多條件設定。
+
+        if (score > 100) {
+            console.log('您得分數是' + score + '分，等級為甲上')
+        }
+
+        if (score == 100) {
+            console.log('您得分數是' + score + '分，等級為甲等')
+        }
+        if (score < 100 && score >= 90) {
+            console.log('您得分數是' + score + '分，等級為乙等')
+        }
+
+        if (score < 90 && score >= 80) {
+            console.log('您得分數是' + score + '分，等級為丙等')
+        }
+
+        if (score < 80 && score >= 70) {
+            console.log('您得分數是' + score + '分，等級為丁等')
+        }
+
+        if (score < 70 && score >= 60) {
+            console.log('您得分數是' + score + '分，等級為戊等')
+        }
+
+        if (score < 60 && score >= 0) {
+            console.log('您得分數是' + score + '分，等級為己等')
+        }
+
+        if (score < 0) {
+            console.log('您得分數是' + score + '分，等級為負分')
+        }
+
+
+
+        // 法二
+        // 利用多個 if 與 else 達成分數篩選功能，結構為巢狀結構，用 else 包裹下一個 if 與 else，層層包裹會使程式碼往右邊移動，(condition)內不需要太多條件限制，藉由 if 符合則輸出，不符合則 else 往內丟繼續執行。 
+
+        if (score < 0) {
+            console.log('您得分數是' + score + '分，等級為負分')
+        } else {
+            if (score <= 59) {
+                console.log('您得分數是' + score + '分，等級為己等')
+            } else {
+                if (score <= 69) {
+                    console.log('您得分數是' + score + '分，等級為戊等')
+                } else {
+                    if (score <= 79) {
+                        console.log('您得分數是' + score + '分，等級為丁等')
+                    } else {
+                        if (score <= 89) {
+                            console.log('您得分數是' + score + '分，等級為丙等')
+                        } else {
+                            if (score <= 99) {
+                                console.log('您得分數是' + score + '分，等級為乙等')
+                            } else {
+                                if (score == 100) {
+                                    console.log('您得分數是' + score + '分，等級為甲等')
+                                } else {
+                                    console.log('您得分數是' + score + '分，等級為甲上')
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        // 法三 
+        // 利用多個 if 與 else if 達成分數篩選功能，多個 if 與 else if 為同層，不需要在(condition)內放置許多條件，因為 if 與 else if 特性為符合條件就會輸出結果，因此(condition)內可以減少許多條件設定。
+        // 為最好的方法，相比 if 不用太多條件限制，相比 if else 巢狀結構呈現更清楚。
+
+
+        if (score > 100) {
+            console.log('您得分數是' + score + '分，等級為甲上')
+        }
+        else if (score == 100) {
+            console.log('您得分數是' + score + '分，等級為甲等')
+        }
+        else if (score >= 90) {
+            console.log('您得分數是' + score + '分，等級為乙等')
+        }
+
+        else if (score >= 80) {
+            console.log('您得分數是' + score + '分，等級為丙等')
+        }
+
+        else if (score >= 70) {
+            console.log('您得分數是' + score + '分，等級為丁等')
+        }
+
+        else if (score >= 60) {
+            console.log('您得分數是' + score + '分，等級為戊等')
+        }
+
+        else if (score >= 0) {
+            console.log('您得分數是' + score + '分，等級為己等')
+        }
+
+        else {
+            console.log('您得分數是' + score + '分，等級為負分')
+        }
+
+
+    </script>
+</body>
+
+</html>
