@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .tab-area {
+            width: 80%;
+            background-color: gray;
+            margin: auto;
+        }
+
+        .tab-group {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+        }
+
+        .tab-btn {
+            width: 200px;
+            line-height: 40px;
+            background-color: greenyellow;
+            text-align: center;
+            font: 24px;
+            font-weight: 900;
+        }
+
+        .tab-btn:hover {
+            background-color: rgb(77, 116, 20);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        /* active 直接給，在元素後會變偽類別，順序重要會影響 */
+        .active {
+            background-color: red;
+        }
+
+        .tab-content {
+            background-color: hotpink;
+            padding: 0 10px;
+            display: none;
+        }
+
+        /* 順序重要會影響 */
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tab-area">
+        <div class="tab-group">
+            <div class="tab-btn" id='btn-1'>按鈕一</div>
+            <div class="tab-btn" id='btn-2'>按鈕二</div>
+            <div class="tab-btn" id='btn-3'>按鈕三</div>
+        </div>
+
+        <div class="tab-content-group">
+            <div id="content-1" class="tab-content">
+                <h1>內容一</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div id="content-2" class="tab-content">
+                <h1>內容二</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div id="content-3" class="tab-content">
+                <h1>內容三</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        //宣告按鈕利用 id 作區別 
+        var btn_1 = document.querySelector('#btn-1')
+        var btn_2 = document.querySelector('#btn-2')
+        var btn_3 = document.querySelector('#btn-3')
+
+        var content_1 = document.querySelector('#content-1')
+        var content_2 = document.querySelector('#content-2')
+        var content_3 = document.querySelector('#content-3')
+
+
+        console.log(btn_1)
+
+        //按鈕在按的時候，先移除全部按鈕與內容的 active，再增加各自的acvtive
+        btn_1.onclick = function () {
+
+            removeAllActive();
+            btn_1.classList.add('active')
+            content_1.classList.add('active')
+
+        }
+
+        btn_2.onclick = function () {
+
+            removeAllActive();
+            btn_2.classList.add('active')
+            content_2.classList.add('active')
+
+        }
+
+        btn_3.onclick = function () {
+
+            removeAllActive();
+            btn_3.classList.add('active')
+            content_3.classList.add('active')
+
+        }
+
+        // 利用 functiocn 函式處理全部的重複 remove 指令，因為三個按鈕都會用到
+        function removeAllActive() {
+
+            btn_1.classList.remove('active')
+            content_1.classList.remove('active')
+            btn_2.classList.remove('active')
+            content_2.classList.remove('active')
+            btn_3.classList.remove('active')
+            content_3.classList.remove('active')
+
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

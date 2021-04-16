@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <!-- 第一張圖  -->
+    <img src=" http://pic.5tu.cn/uploads/allimg/1006/131143347180.jpg"
+        alt="">
+
+
+    <script>
+        // 宣告 img 等於 圖片的 img 標籤
+        var img = document.querySelector("img")
+
+        // console.log(img)
+
+        // img 點擊要做什麼
+        img.onclick = function () {
+            // console.log(img.src) 
+                // 當點擊時 img.src 比較" == "判斷圖片若是第一張時圖則更換成第二張圖
+            if (img.src == 'http://pic.5tu.cn/uploads/allimg/1006/131143347180.jpg') {
+                // 第二張圖
+                img.src = 'http://pic.pimg.tw/iamjulia/4a42f9c6982fd_wn.jpg'
+            }
+            // 若是第二張圖則變成第一張圖
+            else{
+                img.src = 'http://pic.5tu.cn/uploads/allimg/1006/131143347180.jpg'
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
