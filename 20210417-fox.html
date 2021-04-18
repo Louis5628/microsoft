@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+
+        nav {
+            width: 100%;
+            background-color: black;
+
+        }
+
+        nav .container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .nav-left .option {
+            background-color: black;
+            color: white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-right {
+
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        main {
+            width: 100vw;
+            height: 800px;
+
+        }
+
+
+
+
+        footer .container {
+            width: 80%;
+            margin: auto;
+        }
+
+
+        .footer-up{
+            display: flex;
+            flex-direction: row;
+            background-color: blue;
+        }
+
+
+        .footer-up .option{
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+
+        .footer-up .option{
+            margin-right: 50px;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <nav>
+
+        <div class="container">
+            <div class="nav-left">
+                <div class="option">Blog</div>
+                <div class="option">首頁</div>
+                <div class="option">分類</div>
+                <div class="option">標籤</div>
+                <div class="option">關於我</div>
+            </div>
+            <div class="nav-right">
+                <div class="search"><input type="text"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-up">
+                <div class="option">
+
+                </div>
+                <div class="option">
+                    <h4>最新部落客</h4>
+                    <a href="">用戶故事</a>
+                    <a href="">用戶故事</a>
+                    <a href="">用戶故事</a>
+                </div>
+                <div class="option">
+                    <h4>最新部落客</h4>
+                    <a href="">用戶故事</a>
+                    <a href="">用戶故事</a>
+                    <a href="">用戶故事</a>
+                </div>
+                <div class="option">
+                    <h4>最新部落客</h4>
+                    <p>這是我的個人部落客，會分享關於論壇、寫作、思考相關的任何內容，希望可以給來到這邊的人有所幫助</p>
+
+                </div>
+            </div>
+            <div class="footer-down">
+                <p>Copyright ★ ★ 2020 - 2021 Lirenmi Designed by Lirenmi</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

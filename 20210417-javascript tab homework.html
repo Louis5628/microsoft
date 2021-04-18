@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20210417 HW</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .tab-area {
+            width: 80%;
+            background-color: gray;
+            margin: auto;
+        }
+
+        .tab-group {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+        }
+
+        .tab-btn {
+            width: 150px;
+            line-height: 40px;
+            background-color: greenyellow;
+            text-align: center;
+            font: 24px;
+            font-weight: 900;
+        }
+
+        .tab-btn:hover {
+            background-color: rgb(77, 116, 20);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        /* active 直接給，在元素後會變偽類別，順序重要會影響 */
+        .active {
+            background-color: red;
+        }
+
+        .tab-content {
+            background-color: hotpink;
+            padding: 0 10px;
+            display: none;
+        }
+
+        /* 順序重要會影響 */
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tab-area">
+        <div class="tab-group">
+            <div class="tab-btn">按鈕一</div>
+            <div class="tab-btn">按鈕二</div>
+            <div class="tab-btn">按鈕三</div>
+            <div class="tab-btn">按鈕四</div>
+            <div class="tab-btn">按鈕五</div>
+            <div class="tab-btn">按鈕六</div>
+        </div>
+
+        <div class="tab-content-group">
+            <div class="tab-content">
+                <h1>內容一</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div class="tab-content">
+                <h1>內容二</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div class="tab-content">
+                <h1>內容三</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div class="tab-content">
+                <h1>內容四</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div class="tab-content">
+                <h1>內容五</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+            <div class="tab-content">
+                <h1>內容六</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis porro consequatur incidunt
+                    similique, inventore distinctio nulla veritatis nesciunt minima qui quaerat ex eos tenetur provident
+                    enim veniam maiores blanditiis.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var btns = document.querySelectorAll('.tab-btn')
+        var active = document.querySelector('.active')
+        // var active = document.querySelectorAll('.active')
+        var contents = document.querySelectorAll('.tab-content')
+
+        console.log(btns)
+        // console.log(contents)
+
+
+
+        for (let index = 0; index < btns.length && contents[index]; index++) {
+            btns[index].onclick = function () {
+                if (btns[index] == '.active') {
+                    removeAllActive();
+                }
+
+                else {
+
+                        btns[index].classList.add('active')
+                        contents[index].classList.add('active')
+                        // console.log(btns[index])
+                    }
+
+                function removeAllActive() {
+                    btns.classList.remove('.active')
+                }
+            }
+        }
+
+
+
+
+
+
+
+        // for (let index = 0; index < btns.length; index++) {
+
+
+        //     btns[index].onclick = function () {
+
+        //         if (btns[index] == 'active') {
+        //             btns[index].classList.remove('active')
+
+        //         } else {
+
+        //             btns[index].classList.add('active')
+        //         }
+        //     }
+
+        // }
+
+
+
+
+
+
+        // btns[index].onclick = function () {
+        //     console.log(btns[index])
+        //     btns[index].classList.remove('active')
+        //     btns[index].classList.add('active')
+        // }
+
+
+
+
+
+
+
+
+
+        // for (let index = 0; index < btns.length; index++) {
+
+        //     btns[index].onclick = function () {
+        //         console.log(btns[index])
+
+        //     }
+
+
+        // }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
