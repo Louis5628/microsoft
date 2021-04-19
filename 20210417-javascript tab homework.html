@@ -120,85 +120,29 @@
     <script>
 
         var btns = document.querySelectorAll('.tab-btn')
-        var active = document.querySelector('.active')
-        // var active = document.querySelectorAll('.active')
+
         var contents = document.querySelectorAll('.tab-content')
 
-        console.log(btns)
-        // console.log(contents)
-
-
-
-        for (let index = 0; index < btns.length && contents[index]; index++) {
+        for (let index = 0; index < btns.length; index++) {
             btns[index].onclick = function () {
-                if (btns[index] == '.active') {
-                    removeAllActive();
-                }
+                // removeAllActive()前面不用加 function
+                removeAllActive();
+                // 'active'不用加. 因為裡面直接是class了
+                btns[index].classList.add('active')
+                contents[index].classList.add('active')
+                // console.log(btns[index])
 
-                else {
-
-                        btns[index].classList.add('active')
-                        contents[index].classList.add('active')
-                        // console.log(btns[index])
-                    }
-
-                function removeAllActive() {
-                    btns.classList.remove('.active')
-                }
             }
         }
 
+        function removeAllActive() {
+            for (let index = 0; index < btns.length; index++) {
+                btns[index].classList.remove('active')
+                contents[index].classList.remove('active')
 
+            }
 
-
-
-
-
-        // for (let index = 0; index < btns.length; index++) {
-
-
-        //     btns[index].onclick = function () {
-
-        //         if (btns[index] == 'active') {
-        //             btns[index].classList.remove('active')
-
-        //         } else {
-
-        //             btns[index].classList.add('active')
-        //         }
-        //     }
-
-        // }
-
-
-
-
-
-
-        // btns[index].onclick = function () {
-        //     console.log(btns[index])
-        //     btns[index].classList.remove('active')
-        //     btns[index].classList.add('active')
-        // }
-
-
-
-
-
-
-
-
-
-        // for (let index = 0; index < btns.length; index++) {
-
-        //     btns[index].onclick = function () {
-        //         console.log(btns[index])
-
-        //     }
-
-
-        // }
-
+        }
 
 
 
